@@ -8,7 +8,16 @@ For use with [Mac Deploy Stick](https://twocanoes.com/products/mac/mac-deploy-st
 
 * `munki-setup.sh`: Configures Munki client based on given `ClientIdentifier`
 * `create-user.sh`: Creates user based on env variables
-* `partition-disk.sh`: Partitions the disk for separate User partition
-* `set-fstab.sh`: Sets `fstab` correctly
+* `partition-disk.sh`: Partitions the disk for separate User partition; creates `/etc/fstab` for mounting the partition
 
+## MDS Variables
+
+The scripts above are written to work with specific environment variables provided by the MDS workflow. They are:
+
+* `mds_var1`: ClientIdentifier
+* `mds_var2`: New username
+* `mds_var3`: New user fullname
+* `mds_var4`: New user password
+* `mds_var5`: New user admin? (`1` or `0`)
+* `mds_var6`: Partition disk? (`1` or `0`)
 
