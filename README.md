@@ -20,4 +20,5 @@ The scripts above are written to work with specific environment variables provid
 * `mds_var4`: New user password
 * `mds_var5`: New user admin? (`1` or `0`)
 * `mds_var6`: Create Users Volume? (`1` or `0`)
+* `mds_var7`: SoftwareRepoURL for Munki
 
