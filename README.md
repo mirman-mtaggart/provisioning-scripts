@@ -8,7 +8,7 @@ For use with [Mac Deploy Stick](https://twocanoes.com/products/mac/mac-deploy-st
 
 * `munki-setup.sh`: Configures Munki client based on given `ClientIdentifier`
 * `create-user.sh`: Creates user based on env variables
-* `partition-disk.sh`: Partitions the disk for separate User partition; creates `/etc/fstab` for mounting the partition
+* `create-user-volume.sh`: Creates a new APFS volume for User data. Not a hard partition, so actually easier to work with. 
 
 ## MDS Variables
 
@@ -19,5 +19,5 @@ The scripts above are written to work with specific environment variables provid
 * `mds_var3`: New user fullname
 * `mds_var4`: New user password
 * `mds_var5`: New user admin? (`1` or `0`)
-* `mds_var6`: Partition disk? (`1` or `0`)
+* `mds_var6`: Create Users Volume? (`1` or `0`)
 
