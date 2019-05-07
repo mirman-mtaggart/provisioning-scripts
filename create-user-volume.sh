@@ -12,8 +12,7 @@ if [ $mds_var6 == "1" ]; then
     mv /Volumes/Mirmantosh/Users/* /Volumes/Users/
     rm -rf /Volumes/Mirmantosh/Users
     ln -s /Volumes/Users /Volumes/Mirmantosh/Users
-    
+    exit 0
 else
-    echo "No User Volume created"
     exit 0
 fi
