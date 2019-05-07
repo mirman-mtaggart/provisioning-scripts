@@ -4,10 +4,9 @@
 if [ $mds_var6 == "1" ]; then
     # Grab device id from diskutil list
     DISK=$(diskutil list | grep "synthesized" | cut -c 1-10)
-    echo "Creating new Volume Users at $DISK"
 
     # Create APFS Volume. No size needed
-    diskutil apfs addVolume $DISK APFS "Users"
+    diskutil apfs addVolume $DISK APFS Users
 
     # Move folders over to new volume
     mv /Volumes/Mirmantosh/Users/* /Volumes/Users/
