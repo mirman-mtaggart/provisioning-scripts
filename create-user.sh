@@ -8,15 +8,20 @@ RESULT=$RANDOM
 let "RESULT %= $UID_RANGE"
 RESULT=$(($RESULT+$UID_FLOOR))
 
-dscl . -create /Users/$mds_var2
-dscl . -create /Users/$mds_var2 UserShell /bin/bash
-dscl . -create /Users/$mds_var2 RealName $mds_var3
-dscl . -create /Users/$mds_var2 UniqueID $RESULT
-dscl . -create /Users/$mds_var2 PrimaryGroupID 1000
-dscl . -create /Users/$mds_var2 NFSHomeDirectory /Users/$mds_var2
-dscl . -passwd /Users/$mds_var2 $mds_var4
-dscl . -append /Groups/_lpadmin GroupMembership $mds_var2
+USERNAME=$(eval echo $mds_var2)
+REALNAME=$(eval echo $mds_var3)
+PASSWORD=$(eval echo $mds_var4)
+ADMIN=$mds_var5
 
-if [ $mds_var5 == "1" ]; then
-    dscl . -append /Groups/admin GroupMembership $mds_var2
+dscl . -create /Users/$USERNAME
+dscl . -create /Users/$USERNAME UserShell /bin/bash
+dscl . -create /Users/$USERNAME RealName "'$REALNAME'"
+dscl . -create /Users/$USERNAME UniqueID $RESULT
+dscl . -create /Users/$USERNAME PrimaryGroupID 1000
+dscl . -create /Users/$USERNAME NFSHomeDirectory /Users/$USERNAME
+dscl . -passwd /Users/$USERNAME $PASSWORD
+dscl . -append /Groups/_lpadmin GroupMembership $USERNAME
+
+if [ $ADMIN == "1" ]; then
+    dscl . -append /Groups/admin GroupMembership $USERNAME
 fi
