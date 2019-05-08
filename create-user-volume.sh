@@ -1,7 +1,7 @@
 # So it's not actually a partition in APFS. It's a new Volume.
 
 # Create the Volume if requested
-if [ $mds_var6 == "1" ]; then
+if [ $mds_var6 == 1 ]; then
     # Grab device id from diskutil list
     DISK=$(diskutil list | grep "synthesized" | cut -c 1-10)
 

@@ -4,8 +4,8 @@ MUNKI_FILE=/Library/Preferences/ManagedInstalls.plist
 
 # ClientIdentifier: mds_var1
 
-CLIENT_ID=$(eval echo $mds_var1)
-REPO_URL=$(eval echo $mds_var7)
+CLIENT_ID=$mds_var1
+REPO_URL=$mds_var7
 
 # Set Client Identifier
 defaults write $MUNKI_FILE ClientIdentifier $CLIENT_ID
