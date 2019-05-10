@@ -9,9 +9,9 @@ if [ $mds_var6 == 1 ]; then
     diskutil apfs addVolume $DISK APFS Users
 
     # Move folders over to new volume
-    mv /Volumes/Mirmantosh/Users/* /Volumes/Users/
-    rm -rf /Volumes/Mirmantosh/Users
-    ln -s /Volumes/Users /Volumes/Mirmantosh/Users
+    mv /Users/* /Volumes/Users/
+    rm -rf /Users
+    ln -s /Volumes/Users /Users
     exit 0
 else
     exit 0
