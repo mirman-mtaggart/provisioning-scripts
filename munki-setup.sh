@@ -2,8 +2,8 @@
 
 MUNKI_FILE=/Library/Preferences/ManagedInstalls.plist
 
-# CHANGE THIS
-CLIENT_ID="my_identifier"
+# Client Identifier is $mds_var1
+CLIENT_ID=$mds_var1
 
 # Set Client Identifier
 defaults write $MUNKI_FILE ClientIdentifier $CLIENT_ID
