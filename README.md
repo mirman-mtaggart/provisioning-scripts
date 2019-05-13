@@ -23,3 +23,4 @@ The scripts above are written to work with specific environment variables provid
 * `mds_var7`: Wi-Fi SSID
 * `mds_var8`: Wi-FI password
 
+**NOTE:** Some MDS workflows may override this variables with scripted values for ease of use. 
