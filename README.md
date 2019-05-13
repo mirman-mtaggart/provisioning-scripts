@@ -14,13 +14,17 @@ For use with [Mac Deploy Stick](https://twocanoes.com/products/mac/mac-deploy-st
 
 The scripts above are written to work with specific environment variables provided by the MDS workflow. They are:
 
-* `mds_var1`: ClientIdentifier
-* `mds_var2`: New username
-* `mds_var3`: New user fullname
-* `mds_var4`: New user password
-* `mds_var5`: New user admin? (`1` or `0`)
-* `mds_var6`: SoftwareRepoURL for Munki
-* `mds_var7`: Wi-Fi SSID
-* `mds_var8`: Wi-FI password
+### Faculty
 
-**NOTE:** Some MDS workflows may override this variables with scripted values for ease of use. 
+* `mds_var1`: New username
+* `mds_var2`: New user fullname
+* `mds_var3`: New user password
+* `mds_var4`: New user admin? (`1` or `0`)
+
+### Student
+
+* `mds_var1`: New username
+* `mds_var2`: New user fullname
+* `mds_var3`: New user password
+
+Other variables can be configured through the MDS Workflow. 
