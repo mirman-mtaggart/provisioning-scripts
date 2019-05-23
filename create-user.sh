@@ -23,6 +23,6 @@ dscl . -passwd /Users/$USERNAME $PASSWORD
 dscl . -append /Groups/_lpadmin GroupMembership $USERNAME
 
 # Local admin for staff users
-if [ $CLIENT_ID == "faculty" ]; then
+if [ $CLIENT_ID == "mirman_faculty" ]; then
     dscl . -append /Groups/admin GroupMembership $USERNAME
 fi
